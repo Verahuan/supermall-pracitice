@@ -1,3 +1,4 @@
+// 路由配置文件
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 

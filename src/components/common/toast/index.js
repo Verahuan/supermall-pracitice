@@ -1,7 +1,7 @@
 import Toast from "./Toast";
 const obj = {}
 obj.install = function (Vue) {
-  //创建组件构造器
+  //创建组件构造器extend
   const toastContrustor = Vue.extend(Toast)
   //new的方式，根据组件构造器，可以创建出来一个组件对象
   const toast = new toastContrustor()

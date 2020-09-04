@@ -15,7 +15,7 @@
     <toast message="加入购物车"></toast>
   </div>
 </template>
-<script>
+<script> 
 
   import Scroll from '@/components/common/scroll/Scroll'
 
@@ -123,9 +123,11 @@
 
         const positionY = -position.y
         const length = this.themeTopYs.length
+		//顶部navbar和位置的联动效果实现
         for (let i = 0; i < length - 1; i++) {
           if (this.currentIndex != i && positionY >= this.themeTopYs[i] && positionY < this.themeTopYs[i+1]){
             this.currentIndex = i
+			//传给nav产生联动效果
             this.$refs.nav.currentIndex = i
             // console.log(i);
           }

@@ -131,10 +131,10 @@
         this.tabOffsetTop = this.$refs.tabControl2.$el.offsetTop
       },
 
-      //网络请求相关方法
+      //网络请求相关方法 是异步操作（then里面的回调）
       getHomeMultiData() {
         getHomeMultiData().then(res => {
-        // console.log(res);
+        // console.log(res); 请求数据之后 获取其中的有用信息 存到data中
         this.banners = res.data.banner.list;
         this.recommends = res.data.recommend.list;
         // console.log(res.data.recommend)

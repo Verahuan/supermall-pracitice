@@ -30,6 +30,8 @@ export default {
     
   },
   methods: {
+	  // 点击切换路由
+	  // router route
     btnClick() {
       // console.log(this.$router)
       if(this.$route.path != this.path){

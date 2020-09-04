@@ -1,5 +1,6 @@
 @import "./normalize.css";
 
+/* 获取根元素的伪元素 定义变量 */
 :root {
   --color-text: #666666;
   --color-high-text: #ff5777;
@@ -8,6 +9,7 @@
   --font-size: 14px;
   --line-height: 1.5;
 }
+
 
 html {
 overflow-x:hidden;
@@ -90,12 +92,14 @@ clear: both;
 .clearfix {zoom: 1;}
 .fl{float: left;}
 .fr{float: right;}
+
 /*单行溢出*/
 .one-txt-cut{
 overflow: hidden;
 white-space: nowrap;
 text-overflow: ellipsis;
 }
+
 /*多行溢出 手机端使用*/
 .txt-cut{
 overflow : hidden;
