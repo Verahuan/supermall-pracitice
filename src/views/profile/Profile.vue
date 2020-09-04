@@ -1,12 +1,15 @@
 <template>
-  <h2>个人</h2>
+  <div>
+    wo
+  </div>
 </template>
-<script>
-  export default {
-    name:"Profile"
-  }
 
+<script>
+export default {
+
+}
 </script>
-<style scoped>
+
+<style>
 
 </style>

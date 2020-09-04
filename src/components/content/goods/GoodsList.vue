@@ -1,13 +1,16 @@
 <template>
-  <div class="GoodsList">
-    <goods-list-items v-for="(item,index) in goods" :goods-item="item" :key="index" ></goods-list-items>
+  <div class="goods">
+    <goods-list-item v-for="item in goods" :key="item.name" :goods-item="item"></goods-list-item>
   </div>
 </template>
-<script>
-  import GoodsListItems from "components/content/goods/GoodsListItems"
 
+<script>
+
+  import GoodsListItem from './GoodsListItem';
   export default {
-    name: "GoodsList",
+    components: {
+      GoodsListItem
+    },
     props: {
       goods: {
         type: Array,
@@ -15,16 +18,14 @@
           return []
         }
       }
-    },
-    components: {
-      GoodsListItems
     }
   }
 </script>
+
 <style scoped>
-  .GoodsList{
-   display:flex;
-   flex-wrap:wrap;
-   justify-content:space-around;
+  .goods{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 </style>

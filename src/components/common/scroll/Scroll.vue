@@ -1,15 +1,20 @@
 <template>
-  <div class="wrapper" ref="wrapper">
+  <div class="warpper" ref="warpper">
     <div class="content">
       <slot></slot>
     </div>
-  </div> 
-
+  </div>
 </template>
+
 <script>
   import BScroll from 'better-scroll'
   export default {
-    name: "Scroll",
+    name: 'Scroll',
+    data() {
+      return {
+        scroll: null
+      }
+    },
     props: {
       probeType: {
         type: Number,
@@ -19,35 +24,31 @@
         type: Boolean,
         default: false
       }
-
-    },
-    data() {
-      return {
-        scroll: null
-      }
-    },
-    methods: {
-      scrollTo(x, y, time = 300) {
-        this.scroll.scrollTo(x, y, time)
-      }
     },
     mounted() {
-      //document.querySelector(".wrapper")获取wrapper方式不太好
-      //在Vue中想要明确拿到某一个元素，为该元素绑定一个ref
-      this.scroll = new BScroll(this.$refs.wrapper, {
+      this.scroll = new BScroll(this.$refs.warpper,{
         click: true,
+        //监听滚动
         probeType: this.probeType,
         pullUpLoad: this.pullUpLoad
       })
-      this.scroll.on("scroll", (position) => {
-      this.$emit("scroll",position)
+      this.scroll.on('scroll', (position) => {
+        this.$emit('scroll',position)
       })
-      this.scroll.on("pullingUp",()=>{
-        this.$emit("pullingUp")
-      })
-  }
+
+      //监听上拉事件
+      this.scroll.on('pullingUp',()=> {
+					this.$emit('pullingUp')
+				})
+    },
+    methods: {
+      scrollTo(x, y, time=300) {
+        this.scroll && this.scroll.scrollTo(x, y, time);
+      }
+    },
   }
 </script>
+
 <style scoped>
 
 </style>

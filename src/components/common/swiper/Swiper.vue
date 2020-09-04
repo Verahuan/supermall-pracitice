@@ -74,7 +74,7 @@
         this.scrolling = true;
 
         // 1.开始滚动动画
-        this.swiperStyle.transition = 'transform ' + this.animDuration + 'ms';
+        this.swiperStyle.transition ='transform '+ this.animDuration + 'ms';
         this.setTransform(currentPosition);
 
         // 2.判断滚动到的位置
@@ -100,7 +100,7 @@
           }
 
           // 2.结束移动后的回调
-          this.$emit('transitionEnd', this.currentIndex - 1);
+          this.$emit('transitionEnd', this.currentIndex-1);
         }, this.animDuration)
       },
 
@@ -163,7 +163,7 @@
         this.setTransform(moveDistance);
       },
 
-      touchEnd: function (e) {
+      touchEnd: function () {
         // 1.获取移动的距离
         let currentMove = Math.abs(this.distance);
 
@@ -239,7 +239,7 @@
     margin: 0 5px;
   }
 
-    .indi-item.active {
-      background-color: rgba(212,62,46,1.0);
-    }
+  .indi-item.active {
+    background-color: rgba(212,62,46,1.0);
+  }
 </style>

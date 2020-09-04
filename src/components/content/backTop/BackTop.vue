@@ -1,21 +1,23 @@
 <template>
-  <div class="backtop">
-    <img src="~assets/img/common/top.png" />
+  <div class="back-top">
+    <img src="~@/assets/img/back-top.png" alt="">
   </div>
 </template>
+
 <script>
   export default {
-    name: "BackTop"
+    name: 'BackTop',
   }
 </script>
+
 <style scoped>
-  .backtop {
-    position:fixed;
-    bottom:56px;
-    right:-30px;
+  .back-top{
+    position: fixed;
+    bottom: 53px;
+    right: 3px;
   }
-  .backtop img{
-    width:50%;
-    height:50%;
+  .back-top img{
+    width: 50px;
+    height: 50px;
   }
 </style>

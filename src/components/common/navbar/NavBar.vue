@@ -5,22 +5,27 @@
     <div class="right"><slot name="right"></slot></div>
   </div>
 </template>
+
 <script>
   export default {
-    name:'NavBar'
+
   }
 </script>
+
 <style scoped>
- .nav-bar {
-    display: flex;
+  .nav-bar{
+    height: 44px;
     line-height: 44px;
-    height:44px;
-    text-align:center;
+    display: flex;
+    text-align: center;
+    box-shadow: 0 2px 1px rgba(100, 100, 100, .1);
   }
-  .center {
-    flex:1;
+  .left,.right{
+    width: 60px;
+    /* background-color:blue; */
   }
-  .right, .left {
-    width:60px;
+  .center{
+    flex: 1;
+    /* background-color:red; */
   }
 </style>
